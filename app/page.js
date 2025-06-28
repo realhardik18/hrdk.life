@@ -6,7 +6,7 @@ export default function Home() {
         <div className="text-6xl">yo i&apos;m hrdk</div>
         <Links/>   
         <div className="pt-8 text-xl leading-relaxed max-w-2xl">
-            <p>i'm a 19 y/o builder actively shipping and learning</p>
+            <p>i&apos;m a 19 y/o builder actively shipping and learning</p>
             <p>building projects in AI/ML, full-stack, & automation</p>
             <p>trying to write code that pays rent (eventually)</p>
             <p>running grindset.club & babysitting mykozu.xyz rn</p>
