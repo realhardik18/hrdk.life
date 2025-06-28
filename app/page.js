@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <div className="h-screen bg-black">
       <div className="pl-5 pt-5">
-        <div className="text-6xl">yo i'm hrdk</div>
+        <div className="text-6xl">yo i&apos;m hrdk</div>
         <Links/>   
         <div className="pt-8 text-xl leading-relaxed max-w-2xl">
             <p>i'm a 19 y/o builder actively shipping and learning</p>
