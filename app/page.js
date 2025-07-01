@@ -1,15 +1,15 @@
 import Links from "./components/links";
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black font-[var(--font-poppins)]">
       <div className="px-4 sm:pl-5 pt-5">
         <div className="text-3xl sm:text-6xl">yo i&apos;m hrdk</div>
         <Links/>   
         <div className="pt-6 sm:pt-6 text-sm sm:text-xl leading-relaxed max-w-2xl">
             <p>i&apos;m a 19 y/o builder actively shipping and learning</p>
-            <p>building projects in AI/ML, full-stack, & automation</p>
+            <p>building projects in ai/ml, full-stack, & automation</p>
             <p>trying to write code that pays rent (eventually)</p>
-            <p>running grindset.club & babysitting mykozu.xyz rn</p>
+            <p>running <a href="/" target="_blank" className="underline text-purple-500">grindset.club</a> & babysitting <a href="/" target="_blank" className="underline text-blue-500">mykozu.xyz</a> rn</p>
         </div>              
         <div className="pt-6 sm:pt-6 text-sm sm:text-xl leading-relaxed max-w-2xl">
           <p>freelanced on 20+ tech gigs and builds</p>
