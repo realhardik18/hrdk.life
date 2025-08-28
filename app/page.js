@@ -5,7 +5,7 @@ export default function Home() {
     <div className="flex h-screen">
       {/* Left 3/4: Content */}
       <div className="relative flex-3 w-3/4 flex flex-col bg-black overflow-y-auto p-8">
-        <h1 className="text-white text-7xl font-mono mb-10">yo i'm hrdk</h1>
+        <h1 className="text-white text-7xl font-mono mb-10">yo im hrdk</h1>
         <p className="text-white text-2xl font-mono mb-10 leading-relaxed">
           Welcome to my personal space on the internet. I’m a developer, designer, and thinker who loves creating meaningful digital experiences.
         </p>
