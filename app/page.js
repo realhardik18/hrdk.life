@@ -13,7 +13,7 @@ export default function Home() {
           This site is a reflection of my growth and creativity. Feel free to explore my work, read my blogs, or get in touch.
         </p>
         <p className="text-white text-2xl font-mono mb-10 leading-relaxed">
-          I believe in the power of technology to transform lives and bring people closer together. Let's build something amazing.
+          I believe in the power of technology to transform lives and bring people closer together. Lets build something amazing.
         </p>
         <div className="flex flex-wrap gap-6 mt-auto">
           <a href="/showcase" className="text-purple-500 text-xl font-mono hover:underline">Showcase</a>
