@@ -35,6 +35,9 @@ export default function Home() {
           <a href="/blogs" className="text-red-500 text-lg md:text-2xl font-medium font-sans hover:underline">
             blogs
           </a>
+          <a href="/socials" className="text-green-500 text-lg md:text-2xl font-medium font-sans hover:underline">
+            socials
+          </a>
           <a href="/contact" className="text-blue-500 text-lg md:text-2xl font-medium font-sans hover:underline">
             contact
           </a>
