@@ -469,7 +469,7 @@ export default function Home() {
           style={{ height: "100%", width: "100%" }}
           colorBack="rgb(0, 0, 0)"
           colorFront={colorFront}
-          shape={3}
+          shape="simplex"
           type="4x4"
           pxSize={2}
           offsetX={0}
