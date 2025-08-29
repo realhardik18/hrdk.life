@@ -50,7 +50,7 @@ const projects: Project[] = [
     color: "purple",
     description: "next big thing in the productivity niche",
     comingSoon: true,
-    metric: "coming soon",
+    metric: "work in progress",
     image: "/icons/soon.png", // Added image path
   },
   {
@@ -59,7 +59,7 @@ const projects: Project[] = [
     color: "orange",
     comingSoon: true,
     description: "next big thing in the ed-tech niche",
-    metric: "coming soon",
+    metric: "work in progress",
     image: "/icons/soon.png", // Added image path
   },
 ]
@@ -245,12 +245,10 @@ export default function Home() {
           {/* Intro */}
           <section className="space-y-4 md:space-y-6 text-lg md:text-xl leading-relaxed text-white/80">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
+              19 y/o builder from blr, india. i love to cook software with taste, speed and vibes after which i try to scale them up to the moon. currently learning how to write better code and growing my side projects.
             </p>
             <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.
+              open for new opportunities 24/7. looking forward to learning more everyday and being perpetually curious. if not coding, find me at the gym or grinding clash royale.
             </p>
           </section>
 
@@ -430,19 +428,19 @@ export default function Home() {
                   className="text-sm md:text-base text-white/80 hover:text-white underline underline-offset-4"
                   aria-label="see many more projects on my github"
                 >
-                  many more on my github →
+                  find even more on my github
                 </a>
               </div>
-              <h3 className="mt-6 md:mt-8 text-xl md:text-2xl font-semibold tracking-tight">reach out &amp; more</h3>
+              <h3 className="mb-4 md:mb-6 text-2xl md:text-3xl font-semibold tracking-tight pt-10">reach out &amp; more</h3>
               {/* Finishing note under the GitHub link */}
               <p className="mt-3 text-sm md:text-base text-white/80">
-                always open for gig works — i&apos;ve worked and delivered for 25+ clients. you can contact me via{" "}
+                I&apos;m always open for gigs. I&apos;ve freelanced and delivered for 30+ clients. You can contact me via{" "}
                 <a
                   href={SOCIALS.email}
                   className="underline underline-offset-4 hover:text-white"
                   aria-label="send me an email"
                 >
-                  mail
+                  email
                 </a>{" "}
                 or on{" "}
                 <a
@@ -452,13 +450,13 @@ export default function Home() {
                   className="underline underline-offset-4 hover:text-white"
                   aria-label="message me on x"
                 >
-                  x
+                  X
                 </a>
-                .{" "}
+                . Click{" "}
                 <a href="/blogs" className="underline underline-offset-4 hover:text-white" aria-label="read my blogs">
-                  click here to read my blogs
-                </a>
-                . thank you for visiting — have a great day :)
+                  <span className="underline">here</span>
+                </a>{" "}
+                to read my blogs. thank you for visiting have a great day ahead!
               </p>
             </Reveal>
           </section>
