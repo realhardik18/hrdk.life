@@ -149,22 +149,23 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [])
 
-  const failedIdeas: [string, string][] = [
-    ["FocusFox", "pomodoro with AI nudges"],
-    ["DraftDash", "email summarizer"],
-    ["Clipsmith", "shorts → blog"],
-    ["MeetMind", "AI standup notes"],
-    ["PixelPilot", "auto landing pages"],
-    ["SnoozeLab", "sleep tracker mini"],
-    ["PingPal", "lightweight check-ins"],
-    ["IdeaCrate", "stash + tags"],
-    ["NoteNudge", "habit notes"],
-    ["LoopLens", "feedback rotator"],
-    ["SparkSpin", "random idea gen"],
-    ["PulseBoard", "simple KPI board"],
-    ["ThreadTrim", "thread summarizer"],
-    ["BriefBlink", "quick briefs"],
-    ["DeckDraft", "slide starter"],
+  const failedIdeas: [string, string, string][] = [
+    ["finmeds", "ai powered medical policy reader", "https://github.com/realhardik18/medithon_syntax-error"],
+    ["spotibuddy", "veiw your spotify stats", "https://github.com/realhardik18/SpotiBuddy"],
+    ["vc recorder", "discord.py bot to record audio from a vc", "https://github.com/realhardik18/discord.py-voice-recorder"],
+    ["find the suii", "silly game i made", "https://github.com/realhardik18/find-the-suii"],
+    ["math helper", "discord bot to help you solve your homework", "https://github.com/realhardik18/math-helper"],
+    ["menuchef", "ai generated e-menu cards based on location and weather", "https://github.com/realhardik18/MenuChef"],
+    ["jinsei", "tool to help you plant a plant based on certain parameters", "https://github.com/realhardik18/Jinsei"],
+    ["sports lizar", "ball by ball cricket updates right in discord", "https://github.com/realhardik18/sport-lizar"],
+    ["grillit", "website to roast your reddit account", "https://github.com/realhardik18/GrillIt"],
+    ["quizme.mp3", "generate quizzes based on audio files", "https://github.com/realhardik18/quizme.mp3"],
+    ["LyricsBoard", "generate lyrics boards for your favorite songs", "https://github.com/realhardik18/LyricsBoard"],
+    ["telecap", "iot project to help families monitor tv time", "https://github.com/realhardik18/Telecap"],
+    ["musician bot", "discord bot to play music in the vc", "https://github.com/realhardik18/musician-bot"],
+    ["ting ting", "agentic ai powered reminders", "https://github.com/realhardik18/tinggg"],
+    ["family guy bot", "gives out clips from the show", "https://github.com/realhardik18/TheFamilyGuyBot"],
+    ["bowling mania", "another silly game i made", "https://realhardik18.itch.io/bowling-mania"],
   ]
   const failedRows = Array.from({ length: 5 }, (_, i) => failedIdeas.slice(i * 3, i * 3 + 3))
 
@@ -339,10 +340,10 @@ export default function Home() {
             <Reveal delay={75}>
               <div className="grid grid-cols-2 gap-4 md:gap-5">
                 {[
-                  { title: "winner @boot.dev hackathon", note: "built pokemusic, a website which predicts what playlist a pokemon would listen to based off of their stats and abilites. uses both the spotify and the pokemon api.", post: "#", project: "#" },
-                  { title: "runner up @dev x redis hackathon", note: "built bookwheat, a twitter bot which you can tag under any post to categorically save tweets, keep them all in one place and view them on the website.", post: "#", project: "#" },
-                  { title: "runner up @dev x appwrite hackathon", note: "built topowars, a geoguessr like game right in discord. guess the capital of cities and the country based on images. it also has a custom economy system to score and store points", post: "", project: "#" },
-                  { title: "runner up @break-a-thon", note: "built moodnight, an attempt to make a smart discord music bot. based on the emotion of your speech, it queues relevant music. jaggy as hell but it was very fun to build.", post: "#", project: "#" },
+                  { title: "winner @boot.dev hackathon", note: "built pokemusic, a website which predicts what playlist a pokemon would listen to based off of their stats and abilites. uses both the spotify and the pokemon api.", post: "https://blog.boot.dev/news/hackathon-sept-2022/", project: "https://github.com/realhardik18/PokeMusic" },
+                  { title: "runner up @dev x redis hackathon", note: "built bookwheat, a twitter bot which you can tag under any post to categorically save tweets, keep them all in one place and view them on the website.", post: "https://dev.to/devteam/redis-hackathon-winners-announced-524d", project: "https://github.com/realhardik18/Book-Wheat" },
+                  { title: "runner up @dev x appwrite hackathon", note: "built topowars, a geoguessr like game right in discord. guess the capital of cities and the country based on images. it also has a custom economy system to score and store points", post: "https://dev.to/devteam/congrats-to-the-appwrite-hackathon-winners-4dk9", project: "https://github.com/realhardik18/Topowars" },
+                  { title: "runner up @break-a-thon", note: "built moodnight, an attempt to make a smart discord music bot. based on the emotion of your speech, it queues relevant music. jaggy as hell but it was very fun to build.", post: "https://ibb.co/ymWcbRhL", project: "https://github.com/realhardik18/MoodNight" },
                 ].map((h, i) => (
                   <div
                     key={h.title}
@@ -396,29 +397,26 @@ export default function Home() {
                   <tbody>
                     {failedRows.map((row, ri) => (
                       <tr key={ri}>
-                        {row.map(([name, desc]) => {
-                          const href = `${SOCIALS.github}?tab=repositories&q=${encodeURIComponent(name)}`
-                          return (
-                            <td key={name} className="align-top p-0 border border-white/10">
-                              <a
-                                href={href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative block w-full h-full p-3 md:p-4 cursor-pointer text-white/90 transition-colors hover:text-black focus-visible:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                                aria-label={`open ${name} on github`}
-                              >
-                                <span
-                                  aria-hidden="true"
-                                  className="pointer-events-none absolute inset-0 rounded-none bg-white opacity-0 transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100"
-                                />
-                                <p className="relative z-10 text-sm md:text-[15px] leading-6">
-                                  <span className="font-medium">{name}</span>{" "}
-                                  <span className="opacity-70">({desc})</span>
-                                </p>
-                              </a>
-                            </td>
-                          )
-                        })}
+                        {row.map(([name, desc, href]) => (
+                          <td key={name} className="align-top p-0 border border-white/10">
+                            <a
+                              href={href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group relative block w-full h-full p-3 md:p-4 cursor-pointer text-white/90 transition-colors hover:text-black focus-visible:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                              aria-label={`open ${name} on github`}
+                            >
+                              <span
+                                aria-hidden="true"
+                                className="pointer-events-none absolute inset-0 rounded-none bg-white opacity-0 transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100"
+                              />
+                              <p className="relative z-10 text-sm md:text-[15px] leading-6">
+                                <span className="font-medium">{name}</span>{" "}
+                                <span className="opacity-70">({desc})</span>
+                              </p>
+                            </a>
+                          </td>
+                        ))}
                       </tr>
                     ))}
                   </tbody>

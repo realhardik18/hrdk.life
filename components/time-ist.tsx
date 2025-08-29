@@ -40,7 +40,7 @@ export function TimeIST({ className }: { className?: string }) {
       <HiOutlineLocationMarker className="h-4 w-4 text-white/70" aria-hidden="true" />
       {"blr | "}
       <span
-        className="font-mono tabular-nums w-[6ch] text-center"
+        className="font-mono tabular-nums w-[8ch] text-center"
         aria-hidden="true"
       >
         {time}
