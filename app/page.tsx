@@ -258,7 +258,7 @@ export default function Home() {
               <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl font-semibold tracking-tight">showcase</h2>
             </Reveal>
             <Reveal delay={75}>
-              <div className="grid grid-cols-2 gap-4 md:gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                 {projects.map((p, idx) => {
                   const c = hueClasses(p.color)
                   return (
@@ -274,7 +274,7 @@ export default function Home() {
                       <div className="flex h-full flex-col gap-4">
                         <div className="flex items-center gap-3">
                           <img
-                            src={p.image} // Added logo rendering
+                            src={p.image}
                             alt={`${p.title} logo`}
                             className="h-6 w-6 rounded-sm ring-1 ring-white/10 bg-white/5 shrink-0"
                           />
@@ -291,7 +291,7 @@ export default function Home() {
                             </p>
                           ) : null}
                         </div>
-                        <div className="mt-auto flex items-center justify-between">
+                        <div className="mt-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                           {p.url && !p.comingSoon ? (
                             <a
                               href={p.url}
@@ -336,7 +336,7 @@ export default function Home() {
               <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl font-semibold tracking-tight">hackathon w&apos;s</h2>
             </Reveal>
             <Reveal delay={75}>
-              <div className="grid grid-cols-2 gap-4 md:gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                 {[
                   { title: "winner @boot.dev hackathon", note: "built pokemusic, a website which predicts what playlist a pokemon would listen to based off of their stats and abilites. uses both the spotify and the pokemon api.", post: "https://blog.boot.dev/news/hackathon-sept-2022/", project: "https://github.com/realhardik18/PokeMusic" },
                   { title: "runner up @dev x redis hackathon", note: "built bookwheat, a twitter bot which you can tag under any post to categorically save tweets, keep them all in one place and view them on the website.", post: "https://dev.to/devteam/redis-hackathon-winners-announced-524d", project: "https://github.com/realhardik18/Book-Wheat" },
