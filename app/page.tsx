@@ -8,10 +8,10 @@ import { HiOutlineMail } from "react-icons/hi"
 import { cn } from "@/lib/utils"
 
 const SOCIALS = {
-  x: "https://x.com/yourhandle",
-  github: "https://github.com/yourhandle",
-  linkedin: "https://www.linkedin.com/in/yourhandle",
-  email: "mailto:you@yourdomain.com",
+  x: "https://x.com/hrdktwt",
+  github: "https://github.com/realhardik18",
+  linkedin: "https://www.linkedin.com/in/realhardik18",
+  email: "mailto:hrdk.biz@gmail.com",
 }
 
 type Project = {
@@ -22,6 +22,7 @@ type Project = {
   comingSoon?: boolean
   description?: string
   metric?: string
+  image?: string // Added image property
 }
 
 const projects: Project[] = [
@@ -30,30 +31,36 @@ const projects: Project[] = [
     url: "https://mykozu.xyz",
     label: "View project",
     color: "blue",
-    description: "convert youtube videos into structured courses",
-    metric: "1,300+ users",
+    description: "turn youtube videos into structured courses. track your progress, and get daily tasks that keeps you on track",
+    metric: "1.3k+ users",
+    image: "/icons/kozu.jpg", // Added image path
   },
   {
     title: "steal this idea",
     url: "https://steal-this-idea.vercel.app",
     label: "View project",
     color: "yellow",
-    description: "collection of startup ideas from the brightest minds in the industry",
+    description: "curated startup ideas from top industry minds, neatly organized from their tweets into one collection",
     metric: "30k+ views",
+    image: "/icons/std.png",
   },
   {
     title: "grindset.club",
     label: "Coming soon",
     color: "purple",
+    description: "next big thing in the productivity niche",
     comingSoon: true,
     metric: "coming soon",
+    image: "/icons/soon.png", // Added image path
   },
   {
     title: "peer ai",
     label: "Coming soon",
     color: "orange",
     comingSoon: true,
+    description: "next big thing in the ed-tech niche",
     metric: "coming soon",
+    image: "/icons/soon.png", // Added image path
   },
 ]
 
@@ -173,10 +180,10 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-4 py-8 md:px-8 md:py-12">
           {/* Header */}
           <header className="flex items-center gap-4 md:gap-6 mb-3 md:mb-4">
-            {/* Replacing person circle with a simple avatar placeholder for a sleeker look */}
-            <div
-              aria-hidden="true"
-              className="h-14 w-14 md:h-20 md:w-20 rounded-none ring-1 ring-white/10 bg-white/5"
+            <img
+              src="/pfp.jpg"
+              alt="Profile picture"
+              className="h-14 w-14 md:h-20 md:w-20 rounded-none ring-1 ring-white/10"
             />
             <h1 className="text-pretty text-4xl md:text-6xl font-semibold tracking-tight">yo, I&apos;m hrdk</h1>
           </header>
@@ -267,8 +274,9 @@ export default function Home() {
                     >
                       <div className="flex h-full flex-col gap-4">
                         <div className="flex items-center gap-3">
-                          <div
-                            aria-hidden="true"
+                          <img
+                            src={p.image} // Added logo rendering
+                            alt={`${p.title} logo`}
                             className="h-6 w-6 rounded-sm ring-1 ring-white/10 bg-white/5 shrink-0"
                           />
                           <h3 className="text-lg md:text-xl font-medium text-white">{p.title}</h3>
@@ -331,10 +339,10 @@ export default function Home() {
             <Reveal delay={75}>
               <div className="grid grid-cols-2 gap-4 md:gap-5">
                 {[
-                  { title: "AI Sprint '24", note: "Best Productivity Tool", post: "#", project: "#" },
-                  { title: "Hack the North", note: "Top 10 – Dev Tools", post: "#", project: "#" },
-                  { title: "Buildspace Jam", note: "Community Choice", post: "#", project: "#" },
-                  { title: "Ship Weekend", note: "Best Solo Build", post: "#", project: "#" },
+                  { title: "winner @boot.dev hackathon", note: "built pokemusic, a website which predicts what playlist a pokemon would listen to based off of their stats and abilites. uses both the spotify and the pokemon api.", post: "#", project: "#" },
+                  { title: "runner up @dev x redis hackathon", note: "built bookwheat, a twitter bot which you can tag under any post to categorically save tweets, keep them all in one place and view them on the website.", post: "#", project: "#" },
+                  { title: "runner up @dev x appwrite hackathon", note: "built topowars, a geoguessr like game right in discord. guess the capital of cities and the country based on images. it also has a custom economy system to score and store points", post: "", project: "#" },
+                  { title: "runner up @break-a-thon", note: "built moodnight, an attempt to make a smart discord music bot. based on the emotion of your speech, it queues relevant music. jaggy as hell but it was very fun to build.", post: "#", project: "#" },
                 ].map((h, i) => (
                   <div
                     key={h.title}
