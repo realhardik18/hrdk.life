@@ -151,9 +151,9 @@ export default function Home() {
 
   const failedIdeas: [string, string, string][] = [
     ["finmeds", "ai powered medical policy reader", "https://github.com/realhardik18/medithon_syntax-error"],
-    ["spotibuddy", "veiw your spotify stats", "https://github.com/realhardik18/SpotiBuddy"],
+    ["spotibuddy", "veiw your spotify stats all in one place", "https://github.com/realhardik18/SpotiBuddy"],
     ["vc recorder", "discord.py bot to record audio from a vc", "https://github.com/realhardik18/discord.py-voice-recorder"],
-    ["find the suii", "silly game i made", "https://github.com/realhardik18/find-the-suii"],
+    ["find the suii", "silly game i made where you have to find the invisible ronaldo", "https://github.com/realhardik18/find-the-suii"],
     ["math helper", "discord bot to help you solve your homework", "https://github.com/realhardik18/math-helper"],
     ["menuchef", "ai generated e-menu cards based on location and weather", "https://github.com/realhardik18/MenuChef"],
     ["jinsei", "tool to help you plant a plant based on certain parameters", "https://github.com/realhardik18/Jinsei"],
@@ -163,9 +163,9 @@ export default function Home() {
     ["LyricsBoard", "generate lyrics boards for your favorite songs", "https://github.com/realhardik18/LyricsBoard"],
     ["telecap", "iot project to help families monitor tv time", "https://github.com/realhardik18/Telecap"],
     ["musician bot", "discord bot to play music in the vc", "https://github.com/realhardik18/musician-bot"],
-    ["ting ting", "agentic ai powered reminders", "https://github.com/realhardik18/tinggg"],
+    ["ting ting", "agentic ai powered reminders which calls you to remind you", "https://github.com/realhardik18/tinggg"],
     ["family guy bot", "gives out clips from the show", "https://github.com/realhardik18/TheFamilyGuyBot"],
-    ["bowling mania", "another silly game i made", "https://realhardik18.itch.io/bowling-mania"],
+    ["bowling mania", "another silly game i made for mix and game jam 2020", "https://realhardik18.itch.io/bowling-mania"],
   ]
   const failedRows = Array.from({ length: 5 }, (_, i) => failedIdeas.slice(i * 3, i * 3 + 3))
 
