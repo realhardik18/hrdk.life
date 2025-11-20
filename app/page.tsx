@@ -2,6 +2,7 @@
 import { Dithering } from "@paper-design/shaders-react"
 import type React from "react"
 import { TimeIST } from "@/components/time-ist"
+import GitHubContribGraph from "@/components/GitHubContribGraph"
 import { useState, useEffect, useRef } from "react"
 import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6"
 import { HiOutlineMail } from "react-icons/hi"
@@ -431,6 +432,7 @@ export default function Home() {
                   find even more on my github
                 </a>
               </div>
+              <GitHubContribGraph username="realhardik18" />
               <h3 className="mb-4 md:mb-6 text-2xl md:text-3xl font-semibold tracking-tight pt-10">reach out &amp; more</h3>
               {/* Finishing note under the GitHub link */}
               <p className="mt-3 text-sm md:text-base text-white/80">
