@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     title: "steal this idea",
-    url: "https://steal-this-idea.vercel.app",
+    url: "https://stealthisidea.fun",
     label: "View project",
     color: "yellow",
     description: "curated startup ideas from top industry minds, neatly organized from their tweets into one collection",
