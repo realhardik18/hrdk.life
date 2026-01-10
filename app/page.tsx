@@ -182,12 +182,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-4 py-8 md:px-8 md:py-12">
           {/* Header */}
           <header className="flex items-center gap-4 md:gap-6 mb-3 md:mb-4">
-            <img
-              src="/pfp.jpg"
-              alt="Profile picture"
-              className="h-14 w-14 md:h-20 md:w-20 rounded-none ring-1 ring-white/10"
-            />
-            <h1 className="text-pretty text-4xl md:text-6xl font-semibold tracking-tight">yo, I&apos;m hrdk</h1>
+            <h1 className="text-pretty text-6xl md:text-6xl font-semibold tracking-tight">yo, I&apos;m hrdk</h1>
           </header>
 
           {/* Socials */}
