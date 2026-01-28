@@ -17,10 +17,13 @@ function getISTTimeString(): string {
   return formatted
 }
 
+const PLACEHOLDER = "--:--:--"
+
 export function TimeIST({ className }: { className?: string }) {
-  const [time, setTime] = useState(getISTTimeString())
+  const [time, setTime] = useState(PLACEHOLDER)
 
   useEffect(() => {
+    setTime(getISTTimeString())
     const id = setInterval(() => setTime(getISTTimeString()), 1000)
     return () => clearInterval(id)
   }, [])

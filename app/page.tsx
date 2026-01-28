@@ -241,7 +241,7 @@ export default function Home() {
           {/* Intro */}
           <section className="space-y-4 md:space-y-6 text-lg md:text-xl leading-relaxed text-white/80">
             <p>
-              19 y/o builder from blr, india. i love to cook software with taste, speed and vibes after which i try to scale them up to the moon. currently learning how to write better code and growing my side projects.
+              20 y/o builder from blr, india. i love to cook software with taste, speed and vibes after which i try to scale them up to the moon. currently learning how to write better code and growing my side projects.
             </p>
             <p>
               open for new opportunities 24/7. looking forward to learning more everyday and being perpetually curious. if not coding, find me at the gym or grinding clash royale.
