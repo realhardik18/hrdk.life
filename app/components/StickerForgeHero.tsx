@@ -2,8 +2,8 @@
 
 import Script from "next/script";
 import Image from "next/image";
+import Link from "next/link";
 import { createElement, useEffect, useRef } from "react";
-import { SocialLinks } from "./SocialLinks";
 
 type StickerSource = {
   type: "text";
@@ -63,6 +63,51 @@ type StickerForgeElement = HTMLElement & {
   setSource: (source: StickerSource) => Promise<void>;
   setOptions: (options: StickerOptions) => void;
 };
+
+type Project = {
+  name: string;
+  technologies: string[];
+};
+
+type Experience = {
+  company: string;
+  title: string;
+  period: string;
+  bullets: string[];
+};
+
+const experience: Experience[] = [
+  {
+    company: "Company One",
+    title: "Software Engineering Intern",
+    period: "Jun-Jul 2025",
+    bullets: [
+      "Built and shipped user-facing product updates across the frontend.",
+      "Integrated APIs and improved data handling for core workflows.",
+      "Worked with engineers and designers to polish interaction details.",
+    ],
+  },
+  {
+    company: "Company Two",
+    title: "Product Engineer",
+    period: "Jan-Mar 2026",
+    bullets: [
+      "Developed reusable UI components for internal product surfaces.",
+      "Improved page performance and fixed reliability issues in production flows.",
+      "Documented implementation decisions and supported handoff to the team.",
+    ],
+  },
+];
+
+const projects: Project[] = [
+  { name: "cursor learn", technologies: ["IDE", "Agents", "Desktop"] },
+  { name: "term-v0", technologies: ["CLI", "Coding Agent", "AI Toolkit"] },
+  { name: "inducedrip", technologies: ["3D", "AI", "Web3"] },
+  { name: "ui library", technologies: ["UI"] },
+  { name: "hritu.art", technologies: ["PWA", "UI"] },
+  { name: "algosearch", technologies: ["ML", "Search Engine"] },
+  { name: "coding75", technologies: ["Web", "Ed-Tech"] },
+];
 
 const stickerSource: StickerSource = {
   type: "text",
@@ -192,17 +237,7 @@ export function StickerForgeHero() {
                 },
               })}
             </div>
-
-            <div className="-mr-2 hidden text-zinc-400 sm:block dark:text-zinc-500">
-              <SocialLinks />
-            </div>
           </div>
-
-          <p className="mt-1 text-sm leading-7 text-zinc-500 dark:text-zinc-400 sm:text-base">
-            hrdk <span className="px-1 text-zinc-300">.</span> /hahr-dik/{" "}
-            <span className="px-1 text-zinc-300">.</span> developer{" "}
-            <span className="px-1 text-zinc-300">.</span> he/him
-          </p>
         </div>
       </section>
 
@@ -216,6 +251,135 @@ export function StickerForgeHero() {
             This space collects the projects, tools, and ideas I&apos;m working
             on.
           </p>
+        </div>
+
+        <div className="mt-10 max-w-3xl space-y-6">
+          <section className="border-b border-zinc-200 pb-6 dark:border-zinc-800">
+            <div>
+              <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
+                Today
+              </h2>
+              <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                Building early-stage products and mentoring.
+              </p>
+            </div>
+            <div className="mt-4 space-y-3 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              <p>
+                I&apos;m a software engineer building early-stage products.
+              </p>
+              <p>
+                I enjoy traveling, robotics, fast cars, and learning Japanese.
+              </p>
+              <p>
+                I also mentor, judge, and run a small team of highly skilled,
+                creative, and experienced designers.
+              </p>
+            </div>
+          </section>
+
+          <section className="border-b border-zinc-200 pb-6 dark:border-zinc-800">
+            <div>
+              <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
+                Past
+              </h2>
+              <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                Teams and roles I&apos;ve helped shape.
+              </p>
+            </div>
+            <ul className="mt-4 space-y-6">
+              {experience.map((item) => (
+                <li key={item.company} className="text-zinc-600 dark:text-zinc-400">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                    <div>
+                      <h3 className="text-base font-medium text-zinc-900 dark:text-zinc-100">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                        {item.company}
+                      </p>
+                    </div>
+                    <p className="font-mono text-xs uppercase text-zinc-400 dark:text-zinc-500">
+                      {item.period}
+                    </p>
+                  </div>
+                  <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section>
+            <div>
+              <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
+                Personal projects
+              </h2>
+              <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                Experiments in developer tools, AI, and interfaces.
+              </p>
+            </div>
+            <ul className="mt-3 divide-y divide-zinc-200 border-y border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
+              {projects.map((project) => (
+                <li
+                  key={project.name}
+                  className="flex flex-col justify-center gap-1 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                >
+                  <a
+                    href="#"
+                    className="w-fit text-base font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-500 dark:text-zinc-100 dark:decoration-zinc-700 dark:hover:text-zinc-400"
+                  >
+                    {project.name}
+                  </a>
+                  <span className="inline-flex w-fit items-center gap-2 rounded-md border border-zinc-300 px-2 py-1 font-mono text-xs text-zinc-500 dark:border-zinc-700 dark:text-zinc-400">
+                    {project.technologies.join(", ")}
+                    <span
+                      aria-hidden="true"
+                      className="size-1.5 rotate-45 border-b border-r border-current"
+                    />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <Link
+            href="/archive"
+            className="group mt-10 flex items-start gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-zinc-700 dark:hover:bg-zinc-900 sm:gap-5 sm:p-5"
+          >
+            <div className="flex size-16 shrink-0 items-center justify-center rounded-xl border border-indigo-200 bg-white text-indigo-500 shadow-sm dark:border-indigo-400/30 dark:bg-zinc-950 sm:size-20">
+              <svg
+                viewBox="0 0 64 64"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="3"
+                aria-hidden="true"
+                className="size-11 sm:size-14"
+              >
+                <rect x="12" y="6" width="40" height="52" rx="7" />
+                <path d="M21 14h8m6 0h8M18 24h28M22 33h20v12H22zM28 29v-3m8 3v-3M21 48h8m6 0h8" />
+                <path d="M27 39h10M32 34v10" />
+              </svg>
+            </div>
+            <div className="min-w-0 pt-0.5">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                <h2 className="font-mono text-xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
+                  mini apps <span aria-hidden="true">↗</span>
+                </h2>
+                <span className="rounded-full bg-zinc-950 px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wide text-white dark:bg-zinc-100 dark:text-zinc-950">
+                  New
+                </span>
+              </div>
+              <p className="mt-2 max-w-2xl font-mono text-sm leading-6 text-zinc-500 dark:text-zinc-400 sm:text-base">
+                A collection of small apps and other projects, shared here in
+                case they&apos;re useful to you too.
+              </p>
+            </div>
+          </Link>
         </div>
       </section>
     </main>
