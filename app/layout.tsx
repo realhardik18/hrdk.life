@@ -54,6 +54,14 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-white dark:bg-zinc-950">
         {children}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed inset-x-0 top-0 z-50 h-14 border-b border-white/30 bg-white/45 backdrop-blur-md [mask-image:linear-gradient(to_bottom,black_0%,black_45%,transparent_100%)] dark:border-white/5 dark:bg-zinc-950/45 sm:h-20"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed inset-x-0 bottom-0 z-50 h-14 border-t border-white/30 bg-white/45 backdrop-blur-md [mask-image:linear-gradient(to_top,black_0%,black_45%,transparent_100%)] dark:border-white/5 dark:bg-zinc-950/45 sm:h-20"
+        />
       </body>
     </html>
   );

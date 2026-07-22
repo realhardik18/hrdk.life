@@ -104,9 +104,6 @@ const projects: Project[] = [
   { name: "term-v0", technologies: ["CLI", "Coding Agent", "AI Toolkit"] },
   { name: "inducedrip", technologies: ["3D", "AI", "Web3"] },
   { name: "ui library", technologies: ["UI"] },
-  { name: "hritu.art", technologies: ["PWA", "UI"] },
-  { name: "algosearch", technologies: ["ML", "Search Engine"] },
-  { name: "coding75", technologies: ["Web", "Ed-Tech"] },
 ];
 
 const stickerSource: StickerSource = {
@@ -203,7 +200,7 @@ export function StickerForgeHero() {
         strategy="afterInteractive"
       />
 
-      <section className="grid w-full max-w-4xl items-start gap-5 sm:grid-cols-[132px_1fr]">
+      <section className="flex w-full max-w-3xl flex-col items-center gap-5 sm:flex-row">
         <div className="size-28 overflow-hidden rounded-[28px] border border-zinc-200 bg-zinc-100 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 sm:size-32">
           <Image
             src="https://unavatar.io/x/hrdktwt"
@@ -215,9 +212,9 @@ export function StickerForgeHero() {
           />
         </div>
 
-        <div className="min-w-0 flex-1">
-          <div className="flex items-start justify-between gap-4">
-            <div className="-ml-3 -mt-3 min-w-0">
+        <div className="min-w-0">
+          <div className="flex justify-center">
+            <div className="-mt-3 min-w-0">
               {/*
                 React does not type-check custom element methods, so the ref is
                 narrowed above before calling the sticker-forge API.
@@ -242,7 +239,7 @@ export function StickerForgeHero() {
       </section>
 
       <section className="mt-8 w-full max-w-4xl">
-        <div className="max-w-3xl">
+        <div className="mx-auto max-w-3xl text-left">
           <h1 className="text-base font-medium tracking-normal text-zinc-900 dark:text-zinc-100">
             About
           </h1>
@@ -253,7 +250,7 @@ export function StickerForgeHero() {
           </p>
         </div>
 
-        <div className="mt-10 max-w-3xl space-y-6">
+        <div className="mx-auto mt-10 max-w-3xl space-y-6 text-left">
           <section className="border-b border-zinc-200 pb-6 dark:border-zinc-800">
             <div>
               <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
@@ -347,7 +344,7 @@ export function StickerForgeHero() {
 
           <Link
             href="/archive"
-            className="group mt-10 flex items-start gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-zinc-700 dark:hover:bg-zinc-900 sm:gap-5 sm:p-5"
+            className="group mt-10 flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-left transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-zinc-700 dark:hover:bg-zinc-900 sm:flex-row sm:gap-5 sm:p-5"
           >
             <div className="flex size-16 shrink-0 items-center justify-center rounded-xl border border-indigo-200 bg-white text-indigo-500 shadow-sm dark:border-indigo-400/30 dark:bg-zinc-950 sm:size-20">
               <svg
