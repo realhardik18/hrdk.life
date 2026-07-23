@@ -35,10 +35,7 @@ export default function ArchivePage() {
   return (
     <main className="flex flex-1 items-center px-5 py-12 sm:py-16">
       <section className="mx-auto w-full max-w-3xl">
-        <p className="font-mono text-sm text-zinc-500 dark:text-zinc-400">
-          /archive
-        </p>
-        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl">
+        <h1 className="text-4xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl">
           archive
         </h1>
         <p className="mt-4 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
@@ -46,7 +43,7 @@ export default function ArchivePage() {
           that helped shape how I build today.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-3">
           {projects.map((project) => (
             <article
               key={project.name}
