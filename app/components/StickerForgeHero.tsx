@@ -171,7 +171,7 @@ export function StickerForgeHero() {
                 <li key={project.name} className="py-2">
                   <details className="group/project">
                     <summary className="flex cursor-pointer list-none flex-wrap items-center gap-2 [&::-webkit-details-marker]:hidden">
-                      <span className="text-base font-medium text-zinc-800 underline decoration-zinc-300 underline-offset-4 transition-colors group-hover/project:text-zinc-500 dark:text-zinc-200 dark:decoration-zinc-700 dark:group-hover/project:text-zinc-400">
+                      <span className="text-base font-medium text-zinc-800 transition-colors group-hover/project:text-zinc-500 dark:text-zinc-200 dark:group-hover/project:text-zinc-400">
                         {project.name}
                       </span>
                       <span className="ml-auto inline-flex size-7 items-center justify-center rounded-md border border-zinc-300 text-zinc-500 transition-colors group-hover/project:border-zinc-400 group-hover/project:text-zinc-900 dark:border-zinc-700 dark:text-zinc-400 dark:group-hover/project:border-zinc-600 dark:group-hover/project:text-zinc-100">
