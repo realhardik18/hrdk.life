@@ -21,8 +21,8 @@ type Experience = {
 const experience: Experience[] = [
   {
     company: "pocket",
-    title: "product engineer",
-    period: "jan-mar 2026",
+    title: "soft engg intern",
+    period: "jan 2026 - mar 2026",
     logo: "/pocket.png",
     bullets: [
       "built and shipped user-facing product updates across the frontend.",
@@ -33,7 +33,7 @@ const experience: Experience[] = [
   {
     company: "nevar ai",
     title: "software engineering intern",
-    period: "jun-jul 2025",
+    period: "may 2025 - jun 2025",
     logo: "/nevara.png",
     bullets: [
       "developed reusable ui components for internal product surfaces.",
@@ -94,7 +94,7 @@ export function StickerForgeHero() {
         </div>
       </section>
 
-      <section className="mt-8 w-full max-w-4xl">
+      <section className="mt-8 w-full max-w-3xl">
         <div className="mx-auto max-w-3xl text-left">
           <h1 className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">
             about
@@ -144,7 +144,7 @@ export function StickerForgeHero() {
                             {item.company}
                           </p>
                         </div>
-                        <p className="font-mono text-xs uppercase text-zinc-400 dark:text-zinc-500">
+                    <p className="font-mono text-xs text-zinc-900 dark:text-zinc-100">
                           {item.period}
                         </p>
                       </div>

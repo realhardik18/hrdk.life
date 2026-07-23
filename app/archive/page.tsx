@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function ArchivePage() {
   return (
     <main className="flex flex-1 items-center px-5 py-12 sm:py-16">
-      <section className="mx-auto w-full max-w-6xl">
+      <section className="mx-auto w-full max-w-3xl">
         <p className="font-mono text-sm text-zinc-500 dark:text-zinc-400">
           /archive
         </p>
