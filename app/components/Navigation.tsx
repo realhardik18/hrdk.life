@@ -10,19 +10,19 @@ export function Navigation() {
             href="/"
             className="text-sm font-medium text-zinc-900 dark:text-zinc-100"
           >
-            Home
+            home
           </Link>
           <Link
             href="/about"
             className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
           >
-            About
+            about
           </Link>
           <Link
             href="/projects"
             className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
           >
-            Projects
+            projects
           </Link>
         </div>
         <ThemeToggle />

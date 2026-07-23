@@ -16,72 +16,40 @@ const GitHubIcon = () => (
   </svg>
 );
 
-const WebsiteIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    width="20"
-    height="20"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="10" />
-    <line x1="2" y1="12" x2="22" y2="12" />
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-  </svg>
-);
-
-const EmailIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    width="20"
-    height="20"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="2" y="4" width="20" height="16" rx="2" />
-    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+    <path d="M20.45 2H3.55A1.55 1.55 0 0 0 2 3.55v16.9A1.55 1.55 0 0 0 3.55 22h16.9A1.55 1.55 0 0 0 22 20.45V3.55A1.55 1.55 0 0 0 20.45 2ZM8.04 18.74H5.36V10.1h2.68ZM6.7 8.92a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12Zm12.06 9.82h-2.67v-4.2c0-1-.02-2.28-1.39-2.28-1.39 0-1.6 1.08-1.6 2.2v4.28h-2.67V10.1h2.56v1.18h.04c.36-.67 1.23-1.38 2.54-1.38 2.71 0 3.21 1.78 3.21 4.1Z" />
   </svg>
 );
 
 const socialLinks: SocialLink[] = [
   {
-    name: "Twitter",
+    name: "twitter",
     url: "https://twitter.com/realhardik18",
     icon: <XIcon />,
   },
   {
-    name: "GitHub",
+    name: "github",
     url: "https://github.com/realhardik18",
     icon: <GitHubIcon />,
   },
   {
-    name: "Website",
-    url: "https://hrdk.life",
-    icon: <WebsiteIcon />,
-  },
-  {
-    name: "Email",
-    url: "mailto:hello@hrdk.life",
-    icon: <EmailIcon />,
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/realhardik18/",
+    icon: <LinkedInIcon />,
   },
 ];
 
 export function SocialLinks() {
   return (
-    <div className="flex items-center gap-3">
+    <div className="mt-1 flex items-center gap-1">
       {socialLinks.map((link) => (
         <a
           key={link.name}
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          className="p-1 text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
           aria-label={link.name}
         >
           {link.icon}

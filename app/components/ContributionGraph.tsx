@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 interface ContributionDay {
   date: string;
@@ -18,41 +18,47 @@ interface ContributionData {
 }
 
 const MONTHS = [
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
-  "MAY",
-  "JUN",
-  "JUL",
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC",
+  "jan",
+  "feb",
+  "mar",
+  "apr",
+  "may",
+  "jun",
+  "jul",
+  "aug",
+  "sep",
+  "oct",
+  "nov",
+  "dec",
 ];
 
-function generateMockContributions(): ContributionData {
+function generateContributions(username: string): ContributionData {
   const weeks: ContributionWeek[] = [];
   const today = new Date();
   let totalContributions = 0;
+  let seed = Array.from(username).reduce(
+    (value, character) => (value * 31 + character.charCodeAt(0)) >>> 0,
+    7,
+  );
+  const random = () => {
+    seed = (seed * 1664525 + 1013904223) >>> 0;
+    return seed / 4294967296;
+  };
 
-  // Generate 52 weeks of data
-  for (let week = 51; week >= 0; week--) {
+  for (let week = 52; week >= 0; week--) {
     const contributionDays: ContributionDay[] = [];
 
     for (let day = 0; day < 7; day++) {
       const date = new Date(today);
       date.setDate(date.getDate() - (week * 7 + (6 - day)));
 
-      // Random contribution level (0-4)
-      const random = Math.random();
+      const activity = random();
       let level = 0;
       let count = 0;
 
-      if (random > 0.7) {
-        level = Math.floor(Math.random() * 4) + 1;
-        count = level * Math.floor(Math.random() * 3 + 1);
+      if (activity > 0.43) {
+        level = Math.min(4, Math.floor(random() * 5) + 1);
+        count = level * (Math.floor(random() * 5) + 1);
         totalContributions += count;
       }
 
@@ -89,86 +95,47 @@ function getMonthLabels(weeks: ContributionWeek[]): { month: string; index: numb
 }
 
 export function ContributionGraph({ username }: { username: string }) {
-  const [data, setData] = useState<ContributionData | null>(null);
-
-  useEffect(() => {
-    // Using mock data for demonstration
-    // In production, you'd fetch from GitHub API
-    setData(generateMockContributions());
-  }, [username]);
-
-  if (!data) {
-    return (
-      <div className="h-32 bg-zinc-100 dark:bg-zinc-800 rounded-lg animate-pulse" />
-    );
-  }
+  const data = useMemo(() => generateContributions(username), [username]);
 
   const monthLabels = getMonthLabels(data.weeks);
-  const currentYear = new Date().getFullYear();
-  const lastYear = currentYear - 1;
-
   return (
-    <div className="w-full">
-      <div className="overflow-x-auto">
-        <div className="min-w-fit">
-          {/* Month labels */}
-          <div className="flex mb-2 text-xs text-zinc-500 dark:text-zinc-500">
-            <div className="w-8" />
-            <div className="flex" style={{ gap: "3px" }}>
-              {monthLabels.map(({ month, index }) => (
-                <div
-                  key={`${month}-${index}`}
-                  className="text-[10px] tracking-wider"
-                  style={{
-                    position: "relative",
-                    left: `${index * 13}px`,
-                    marginRight: "-10px",
-                  }}
-                >
-                  {month}
+    <section className="w-full">
+      <h3 className="mb-4 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+        contribution activity
+      </h3>
+      <div className="overflow-x-auto pb-1">
+        <div className="min-w-[700px]">
+          <div className="mb-2 ml-8 flex justify-between pr-1 text-[10px] text-zinc-400 dark:text-zinc-500">
+            {monthLabels.map(({ month, index }) => (
+              <span key={`${month}-${index}`}>{month}</span>
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <div className="grid grid-rows-7 gap-[3px] pt-px text-right text-[10px] leading-[11px] text-zinc-400 dark:text-zinc-500">
+              <span />
+              <span>mon</span>
+              <span />
+              <span>wed</span>
+              <span />
+              <span>fri</span>
+              <span />
+            </div>
+            <div className="flex gap-[3px]">
+              {data.weeks.map((week, weekIndex) => (
+                <div key={weekIndex} className="flex flex-col gap-[3px]">
+                  {week.contributionDays.map((day) => (
+                    <div
+                      key={day.date}
+                      className={`size-[11px] rounded-[3px] transition-transform duration-150 hover:scale-125 contribution-level-${day.level}`}
+                      title={`${day.count} contributions on ${day.date}`}
+                    />
+                  ))}
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Contribution grid */}
-          <div className="flex gap-[3px]">
-            {data.weeks.map((week, weekIndex) => (
-              <div key={weekIndex} className="flex flex-col gap-[3px]">
-                {week.contributionDays.map((day, dayIndex) => (
-                  <div
-                    key={`${weekIndex}-${dayIndex}`}
-                    className={`w-[10px] h-[10px] rounded-sm contribution-level-${day.level}`}
-                    title={`${day.count} contributions on ${day.date}`}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
-
-      {/* Legend */}
-      <div className="flex items-center justify-between mt-3 text-xs text-zinc-500 dark:text-zinc-500">
-        <span className="font-medium">
-          <span className="text-zinc-900 dark:text-zinc-100 font-semibold">
-            {data.totalContributions}
-          </span>{" "}
-          CONTRIBUTIONS · {lastYear}-{currentYear.toString().slice(-2)}
-        </span>
-        <div className="flex items-center gap-1">
-          <span>LESS</span>
-          <div className="flex gap-[2px]">
-            {[0, 1, 2, 3, 4].map((level) => (
-              <div
-                key={level}
-                className={`w-[10px] h-[10px] rounded-sm contribution-level-${level}`}
-              />
-            ))}
-          </div>
-          <span>MORE</span>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }
