@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { GithubGraph } from "@/components/unlumen-ui/github-graph";
 import {
   HoverExpand,
   type HoverExpandItem,
 } from "@/components/unlumen-ui/hover-expand";
+import { ContributionGraph } from "./ContributionGraph";
 import { SocialLinks } from "./SocialLinks";
 // import { Keyboard } from "@/components/ui/keyboard";
 
@@ -182,45 +182,24 @@ export function StickerForgeHero() {
               className="mt-3 text-zinc-800 dark:text-zinc-200"
             />
             <div className="mt-6">
-              <GithubGraph
-                account="realhardik18"
-                months={6}
-                variant="github"
-                animation="cascade"
-                animationSpeed={1.25}
-                cellSize={15}
-                cellGap={4}
-                cellRadius={4}
-                ambientEffect="twinkle"
-                ambientIntensity={0.45}
-                showLegend
-                showAccount={false}
-                className="w-full"
-              />
+              <ContributionGraph username="realhardik18" />
             </div>
           </section>
 
           <Link
             href="/archive"
-            className="group mt-10 flex flex-col gap-4 rounded-2xl bg-zinc-50 p-4 text-left transition-colors hover:bg-zinc-100 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 sm:flex-row sm:gap-5 sm:p-5"
+            className="group mt-10 flex flex-col overflow-hidden rounded-2xl bg-zinc-50 text-left transition-colors hover:bg-zinc-100 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 sm:flex-row"
           >
-            <div className="flex size-16 shrink-0 items-center justify-center rounded-xl border border-indigo-200 bg-white text-indigo-500 shadow-sm dark:border-indigo-400/30 dark:bg-zinc-950 sm:size-20">
-              <svg
-                viewBox="0 0 64 64"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="3"
-                aria-hidden="true"
-                className="size-11 sm:size-14"
-              >
-                <rect x="12" y="6" width="40" height="52" rx="7" />
-                <path d="M21 14h8m6 0h8M18 24h28M22 33h20v12H22zM28 29v-3m8 3v-3M21 48h8m6 0h8" />
-                <path d="M27 39h10M32 34v10" />
-              </svg>
+            <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden bg-black sm:aspect-square sm:w-44">
+              <Image
+                src="/icons/dumpster.png"
+                alt="Dumpster illustration"
+                fill
+                sizes="(min-width: 640px) 176px, 100vw"
+                className="scale-110 object-contain transition-transform duration-500 group-hover:scale-125"
+              />
             </div>
-            <div className="min-w-0 pt-0.5">
+            <div className="min-w-0 p-5 sm:py-5">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                 <h2 className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">
                   archive <span aria-hidden="true">↗</span>

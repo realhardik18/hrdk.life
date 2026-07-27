@@ -448,7 +448,7 @@ export function GithubGraph({
       {resource.status === "ready" && weeks.length > 0 && (
         <div className="overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div
-            className="relative flex w-full min-w-max justify-between"
+            className="relative flex min-w-max"
             style={{ gap: cellGap }}
             role="grid"
             aria-label={`GitHub contributions for ${normalizedAccount ?? account}`}

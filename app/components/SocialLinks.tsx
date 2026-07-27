@@ -22,6 +22,23 @@ const LinkedInIcon = () => (
   </svg>
 );
 
+const EmailIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    width="20"
+    height="20"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <rect x="3" y="5" width="18" height="14" rx="2" />
+    <path d="m3 7 9 6 9-6" />
+  </svg>
+);
+
 const socialLinks: SocialLink[] = [
   {
     name: "twitter",
@@ -38,6 +55,11 @@ const socialLinks: SocialLink[] = [
     url: "https://www.linkedin.com/in/realhardik18/",
     icon: <LinkedInIcon />,
   },
+  {
+    name: "email",
+    url: "mailto:hrdk.biz@gmail.com",
+    icon: <EmailIcon />,
+  },
 ];
 
 export function SocialLinks() {
@@ -47,8 +69,8 @@ export function SocialLinks() {
         <a
           key={link.name}
           href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={link.url.startsWith("http") ? "_blank" : undefined}
+          rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
           className="p-1 text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
           aria-label={link.name}
         >
