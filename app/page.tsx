@@ -1,5 +1,5 @@
-import { StickerForgeHero } from "./components/StickerForgeHero";
+import { Portfolio } from "./components/Portfolio";
 
 export default function Home() {
-  return <StickerForgeHero />;
+  return <Portfolio />;
 }
