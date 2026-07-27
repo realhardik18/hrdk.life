@@ -43,9 +43,8 @@ const projects: Project[] = [
     href: "https://blrstartuparena.com",
     description:
       "Live map of startup jobs in Bangalore, tracking fresh openings directly from company career pages.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Laptop showing a developer workspace",
+    image: "/blrstartuparena.jpeg",
+    imageAlt: "BlrStartupArena website preview",
   },
   {
     name: "squidmark",
