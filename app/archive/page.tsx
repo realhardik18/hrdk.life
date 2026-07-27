@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -5,8 +6,13 @@ type ArchiveProject = {
   name: string;
   year: string;
   kind: string;
+  /** Add a local path from /public, e.g. "/archive/daybook.png". */
+  image?: string;
+  /** Add the project's GitHub repository URL. */
+  githubUrl?: string;
 };
 
+// Add each project's image and GitHub URL here as they become available.
 const projects: ArchiveProject[] = [
   { name: "daybook", year: "2025", kind: "journal" },
   { name: "switchboard", year: "2025", kind: "utility" },
@@ -47,18 +53,51 @@ export default function ArchivePage() {
           {projects.map((project) => (
             <article
               key={project.name}
-              className="group flex min-h-44 flex-col justify-between rounded-xl bg-zinc-100 p-6 transition-colors hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+              className="group overflow-hidden rounded-xl bg-zinc-100 transition-colors hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800"
             >
-              <span className="font-mono text-[10px] uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
-                {project.year}
-              </span>
-              <div>
-                <h2 className="text-sm font-medium leading-5 text-zinc-900 dark:text-zinc-100">
-                  {project.name}
-                </h2>
-                <p className="mt-1 font-mono text-[10px] leading-4 text-zinc-500 dark:text-zinc-400">
-                  {project.kind}
-                </p>
+              <div className="relative aspect-[16/9] overflow-hidden bg-zinc-200 dark:bg-zinc-800">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} project preview`}
+                    fill
+                    sizes="(max-width: 639px) calc(100vw - 40px), 50vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="flex size-full items-center justify-center border-b border-dashed border-zinc-300 text-[10px] font-medium uppercase tracking-widest text-zinc-400 dark:border-zinc-700 dark:text-zinc-500">
+                    project image
+                  </div>
+                )}
+              </div>
+
+              <div className="flex min-h-36 flex-col justify-between p-6">
+                <div>
+                  <span className="font-mono text-[10px] uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+                    {project.year}
+                  </span>
+                  <h2 className="mt-3 text-base font-medium leading-5 text-zinc-900 dark:text-zinc-100">
+                    {project.name}
+                  </h2>
+                  <p className="mt-1 font-mono text-[10px] leading-4 text-zinc-500 dark:text-zinc-400">
+                    {project.kind}
+                  </p>
+                </div>
+
+                {project.githubUrl ? (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-5 w-fit text-xs font-medium text-zinc-700 underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-950 dark:text-zinc-300 dark:decoration-zinc-700 dark:hover:text-white"
+                  >
+                    github repo ↗
+                  </a>
+                ) : (
+                  <span className="mt-5 text-xs text-zinc-400 dark:text-zinc-500">
+                    github repo
+                  </span>
+                )}
               </div>
             </article>
           ))}

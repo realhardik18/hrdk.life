@@ -1,17 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { ContributionGraph } from "./ContributionGraph";
 import { SocialLinks } from "./SocialLinks";
 // import { Keyboard } from "@/components/ui/keyboard";
 
 type Project = {
   name: string;
-  stack: string;
+  href?: string;
   description: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
+  comingSoon?: boolean;
 };
 
 type Experience = {
@@ -19,77 +20,57 @@ type Experience = {
   title: string;
   period: string;
   logo: string;
-  bullets: string[];
 };
 
 const experience: Experience[] = [
   {
     company: "pocket",
-    title: "soft engg intern",
+    title: "software engineering intern",
     period: "jan 2026 - mar 2026",
     logo: "/pocket.png",
-    bullets: [
-      "built and shipped user-facing product updates across the frontend.",
-      "integrated apis and improved data handling for core workflows.",
-      "worked with engineers and designers to polish interaction details.",
-    ],
   },
   {
-    company: "nevar ai",
-    title: "software engineering intern",
+    company: "nevara",
+    title: "ai intern",
     period: "may 2025 - jun 2025",
     logo: "/nevara.png",
-    bullets: [
-      "developed reusable ui components for internal product surfaces.",
-      "improved page performance and fixed reliability issues in production flows.",
-      "documented implementation decisions and supported handoff to the team.",
-    ],
   },
 ];
 
 const projects: Project[] = [
   {
-    name: "cursor learn",
-    stack: "Next.js / TypeScript / AI",
+    name: "blrstartuparena",
+    href: "https://blrstartuparena.com",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque at justo luctus facilisis.",
+      "Live map of startup jobs in Bangalore, tracking fresh openings directly from company career pages.",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85",
     imageAlt: "Laptop showing a developer workspace",
   },
   {
-    name: "term-v0",
-    stack: "React / TypeScript / CLI",
+    name: "squidmark",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque at justo luctus facilisis.",
-    image:
-      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Code on a dark developer display",
+      "AI bookmarking that resurfaces saved content at the right time.",
+    comingSoon: true,
   },
   {
-    name: "inducedrip",
-    stack: "Next.js / Motion / Design",
+    name: "lecture boss",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque at justo luctus facilisis.",
-    image:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Laptop and developer workspace at night",
+      "Turn YouTube lectures into structured study with accountability, progress tracking, and smarter workflows.",
+    comingSoon: true,
   },
   {
-    name: "ui library",
-    stack: "React / Tailwind CSS / Motion",
+    name: "stealthisidea",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque at justo luctus facilisis.",
-    image:
-      "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1600&q=85",
-    imageAlt: "Colorful design system materials",
+      "Curated database of high-performing app ads to inspire winning creatives, growth strategies, and product ideas.",
+    comingSoon: true,
   },
 ];
 
 export function StickerForgeHero() {
   return (
     <main className="flex flex-1 flex-col items-center px-5 py-8 sm:py-10">
-      <section className="relative flex w-full max-w-3xl flex-col items-center gap-5 sm:flex-row">
+      <section className="relative flex w-full max-w-3xl flex-row items-center gap-5">
         <p className="absolute right-0 top-0 font-mono text-xs text-zinc-500 dark:text-zinc-400">
           blr, india
         </p>
@@ -134,19 +115,14 @@ export function StickerForgeHero() {
 
         <div className="mx-auto mt-10 max-w-3xl space-y-6 text-left">
           <section className="border-b border-zinc-200 pb-6 dark:border-zinc-800">
-            <div>
-              <h2 className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">
-                work history
-              </h2>
-            </div>
-            <ul className="mt-4 space-y-6">
+            <h2 className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+              work history
+            </h2>
+            <ul className="mt-4 space-y-4">
               {experience.map((item) => (
-                <li
-                  key={item.company}
-                  className="text-base leading-7 text-zinc-600 dark:text-zinc-400"
-                >
+                <li key={item.company}>
                   <div className="flex gap-4">
-                    <div className="relative mt-1 size-10 shrink-0 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+                    <div className="relative mt-0.5 size-10 shrink-0 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
                       <Image
                         src={item.logo}
                         alt={`${item.company} logo`}
@@ -164,15 +140,10 @@ export function StickerForgeHero() {
                             {item.company}
                           </p>
                         </div>
-                    <p className="font-mono text-xs text-zinc-900 dark:text-zinc-100">
+                        <p className="font-mono text-xs text-zinc-900 dark:text-zinc-100">
                           {item.period}
                         </p>
                       </div>
-                      <ul className="mt-3 list-disc space-y-1 pl-5">
-                        {item.bullets.map((bullet) => (
-                          <li key={bullet}>{bullet}</li>
-                        ))}
-                      </ul>
                     </div>
                   </div>
                 </li>
@@ -183,27 +154,44 @@ export function StickerForgeHero() {
           <section>
             <div>
               <h2 className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">
-                personal projects
+                featured projects
               </h2>
             </div>
             <div className="mt-4 grid gap-x-8 gap-y-10 sm:grid-cols-2">
               {projects.map((project) => (
                 <article key={project.name} className="group min-w-0">
-                  <div className="aspect-video overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-900">
-                    <img
-                      src={project.image}
-                      alt={project.imageAlt}
-                      className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <h3 className="mt-3 text-lg font-medium tracking-tight text-zinc-950 dark:text-zinc-50">
-                    {project.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                    {project.stack}
-                  </p>
+                  {project.comingSoon ? (
+                    <div className="flex aspect-video flex-col justify-end rounded-lg border border-dashed border-zinc-300 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900/50">
+                      <h3 className="text-lg font-medium tracking-tight text-zinc-950 dark:text-zinc-50">
+                        {project.name}
+                      </h3>
+                      <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                        coming soon
+                      </p>
+                    </div>
+                  ) : (
+                    <>
+                      <a
+                        href={project.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="relative block aspect-video overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-900"
+                        aria-label={`Visit ${project.name}`}
+                      >
+                        <img
+                          src={project.image}
+                          alt={project.imageAlt}
+                          className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+                        <h3 className="absolute inset-x-4 bottom-3 text-lg font-medium tracking-tight text-white">
+                          {project.name} <span aria-hidden="true">↗</span>
+                        </h3>
+                      </a>
+                    </>
+                  )}
                   <p className="mt-3 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
                     {project.description}
                   </p>
@@ -215,6 +203,7 @@ export function StickerForgeHero() {
             </div>
           </section>
 
+          {/*
           <Link
             href="/archive"
             className="group mt-10 flex flex-col overflow-hidden rounded-2xl bg-zinc-50 text-left transition-colors hover:bg-zinc-100 dark:bg-zinc-900/50 dark:hover:bg-zinc-900 sm:flex-row"
@@ -240,17 +229,10 @@ export function StickerForgeHero() {
               </p>
             </div>
           </Link>
+          */}
         </div>
       </section>
 
-      <footer className="mt-16 w-full max-w-3xl border-t border-zinc-200 pt-10 dark:border-zinc-800">
-        <div className="flex flex-col items-center gap-6">
-          {/* <Keyboard enableSound /> */}
-          <p className="text-xs text-zinc-400 dark:text-zinc-500">
-            © {new Date().getFullYear()} hrdk
-          </p>
-        </div>
-      </footer>
     </main>
   );
 }
