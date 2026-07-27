@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  HoverExpand,
-  type HoverExpandItem,
-} from "@/components/unlumen-ui/hover-expand";
 import { ContributionGraph } from "./ContributionGraph";
 import { SocialLinks } from "./SocialLinks";
 // import { Keyboard } from "@/components/ui/keyboard";
+
+type Project = {
+  name: string;
+  stack: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+};
 
 type Experience = {
   company: string;
@@ -43,31 +47,39 @@ const experience: Experience[] = [
   },
 ];
 
-const projects: HoverExpandItem[] = [
+const projects: Project[] = [
   {
-    label: "cursor learn",
-    sublabel: "ai learning",
+    name: "cursor learn",
+    stack: "Next.js / TypeScript / AI",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque at justo luctus facilisis.",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85",
     imageAlt: "Laptop showing a developer workspace",
   },
   {
-    label: "term-v0",
-    sublabel: "developer tool",
+    name: "term-v0",
+    stack: "React / TypeScript / CLI",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque at justo luctus facilisis.",
     image:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=85",
     imageAlt: "Code on a dark developer display",
   },
   {
-    label: "inducedrip",
-    sublabel: "creative tech",
+    name: "inducedrip",
+    stack: "Next.js / Motion / Design",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque at justo luctus facilisis.",
     image:
       "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=85",
     imageAlt: "Laptop and developer workspace at night",
   },
   {
-    label: "ui library",
-    sublabel: "design system",
+    name: "ui library",
+    stack: "React / Tailwind CSS / Motion",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque at justo luctus facilisis.",
     image:
       "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1600&q=85",
     imageAlt: "Colorful design system materials",
@@ -174,13 +186,30 @@ export function StickerForgeHero() {
                 personal projects
               </h2>
             </div>
-            <HoverExpand
-              items={projects}
-              collapsedHeight={64}
-              expandedHeight={240}
-              showIndex={false}
-              className="mt-3 text-zinc-800 dark:text-zinc-200"
-            />
+            <div className="mt-4 grid gap-x-8 gap-y-10 sm:grid-cols-2">
+              {projects.map((project) => (
+                <article key={project.name} className="group min-w-0">
+                  <div className="aspect-video overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-900">
+                    <img
+                      src={project.image}
+                      alt={project.imageAlt}
+                      className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 className="mt-3 text-lg font-medium tracking-tight text-zinc-950 dark:text-zinc-50">
+                    {project.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                    {project.stack}
+                  </p>
+                  <p className="mt-3 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+                    {project.description}
+                  </p>
+                </article>
+              ))}
+            </div>
             <div className="mt-6">
               <ContributionGraph username="realhardik18" />
             </div>

@@ -33,8 +33,8 @@ export const metadata: Metadata = {
 
 export default function ArchivePage() {
   return (
-    <main className="flex flex-1 items-center px-5 py-12 sm:py-16">
-      <section className="mx-auto w-full max-w-3xl">
+    <main className="flex flex-1 items-center px-5 py-12 sm:px-8 sm:py-16">
+      <section className="mx-auto w-full max-w-5xl">
         <h1 className="text-4xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl">
           archive
         </h1>
@@ -43,11 +43,11 @@ export default function ArchivePage() {
           that helped shape how I build today.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-3">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {projects.map((project) => (
             <article
               key={project.name}
-              className="group flex min-h-36 flex-col justify-between rounded-xl bg-zinc-100 p-5 transition-colors hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+              className="group flex min-h-44 flex-col justify-between rounded-xl bg-zinc-100 p-6 transition-colors hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800"
             >
               <span className="font-mono text-[10px] uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
                 {project.year}
