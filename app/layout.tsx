@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Geist } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
@@ -22,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${ibmPlexMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", ibmPlexMono.variable, "font-sans", geist.variable)}
       suppressHydrationWarning
     >
       <head>

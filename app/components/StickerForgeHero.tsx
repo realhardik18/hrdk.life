@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ContributionGraph } from "./ContributionGraph";
+import { GithubGraph } from "@/components/unlumen-ui/github-graph";
+import {
+  HoverExpand,
+  type HoverExpandItem,
+} from "@/components/unlumen-ui/hover-expand";
 import { SocialLinks } from "./SocialLinks";
-
-type Project = {
-  name: string;
-  description: string;
-};
+// import { Keyboard } from "@/components/ui/keyboard";
 
 type Experience = {
   company: string;
@@ -43,26 +43,34 @@ const experience: Experience[] = [
   },
 ];
 
-const projects: Project[] = [
+const projects: HoverExpandItem[] = [
   {
-    name: "cursor learn",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae neque at justo luctus facilisis.",
+    label: "cursor learn",
+    sublabel: "ai learning",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Laptop showing a developer workspace",
   },
   {
-    name: "term-v0",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae neque at justo luctus facilisis.",
+    label: "term-v0",
+    sublabel: "developer tool",
+    image:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Code on a dark developer display",
   },
   {
-    name: "inducedrip",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae neque at justo luctus facilisis.",
+    label: "inducedrip",
+    sublabel: "creative tech",
+    image:
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Laptop and developer workspace at night",
   },
   {
-    name: "ui library",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae neque at justo luctus facilisis.",
+    label: "ui library",
+    sublabel: "design system",
+    image:
+      "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Colorful design system materials",
   },
 ];
 
@@ -166,54 +174,29 @@ export function StickerForgeHero() {
                 personal projects
               </h2>
             </div>
-            <ul className="mt-3 divide-y divide-zinc-200 border-y border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
-              {projects.map((project) => (
-                <li key={project.name} className="py-2">
-                  <details className="group/project">
-                    <summary className="flex cursor-pointer list-none flex-wrap items-center gap-2 [&::-webkit-details-marker]:hidden">
-                      <span className="text-base font-medium text-zinc-800 transition-colors group-hover/project:text-zinc-500 dark:text-zinc-200 dark:group-hover/project:text-zinc-400">
-                        {project.name}
-                      </span>
-                      <span className="ml-auto inline-flex size-7 items-center justify-center rounded-md border border-zinc-300 text-zinc-500 transition-colors group-hover/project:border-zinc-400 group-hover/project:text-zinc-900 dark:border-zinc-700 dark:text-zinc-400 dark:group-hover/project:border-zinc-600 dark:group-hover/project:text-zinc-100">
-                        <span
-                          aria-hidden="true"
-                          className="size-1.5 rotate-45 border-b border-r border-current transition-transform duration-200 group-open/project:rotate-[225deg]"
-                        />
-                      </span>
-                    </summary>
-                    <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-open/project:grid-rows-[1fr]">
-                      <div className="overflow-hidden">
-                        <div className="grid -translate-y-2 grid-cols-[96px_1fr] gap-4 pt-3 opacity-0 transition-[opacity,transform] duration-300 ease-out group-open/project:translate-y-0 group-open/project:opacity-100 sm:grid-cols-[120px_1fr] sm:gap-5">
-                          <div className="flex aspect-square items-center justify-center rounded-lg border border-dashed border-zinc-300 bg-zinc-50 text-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-500">
-                            <svg
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              aria-hidden="true"
-                              className="size-7"
-                            >
-                              <rect x="3" y="4" width="18" height="16" rx="2" />
-                              <circle cx="8.5" cy="9" r="1.5" />
-                              <path d="m5 17 4.5-4 3 2.5 2.5-2 4 3.5" />
-                            </svg>
-                          </div>
-                          <div className="min-w-0 pt-1">
-                            <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400">
-                              {project.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </details>
-                </li>
-              ))}
-            </ul>
+            <HoverExpand
+              items={projects}
+              collapsedHeight={64}
+              expandedHeight={240}
+              showIndex={false}
+              className="mt-3 text-zinc-800 dark:text-zinc-200"
+            />
             <div className="mt-6">
-              <ContributionGraph username="realhardik18" />
+              <GithubGraph
+                account="realhardik18"
+                months={6}
+                variant="github"
+                animation="cascade"
+                animationSpeed={1.25}
+                cellSize={15}
+                cellGap={4}
+                cellRadius={4}
+                ambientEffect="twinkle"
+                ambientIntensity={0.45}
+                showLegend
+                showAccount={false}
+                className="w-full"
+              />
             </div>
           </section>
 
@@ -251,6 +234,15 @@ export function StickerForgeHero() {
           </Link>
         </div>
       </section>
+
+      <footer className="mt-16 w-full max-w-3xl border-t border-zinc-200 pt-10 dark:border-zinc-800">
+        <div className="flex flex-col items-center gap-6">
+          {/* <Keyboard enableSound /> */}
+          <p className="text-xs text-zinc-400 dark:text-zinc-500">
+            © {new Date().getFullYear()} hrdk
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
