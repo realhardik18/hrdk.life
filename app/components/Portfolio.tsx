@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 import { ContributionGraph } from "./ContributionGraph";
 import { SocialLinks } from "./SocialLinks";
 // import { Keyboard } from "@/components/ui/keyboard";
@@ -205,6 +205,22 @@ export function Portfolio() {
                 </article>
               ))}
             </div>
+            <section className="mt-10">
+              <h2 className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                view all projects
+              </h2>
+              <Link
+                href="/projects"
+                className="group mt-4 flex min-h-32 flex-col justify-between rounded-lg border border-zinc-200 bg-zinc-50 p-5 text-left transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900"
+              >
+                <span className="text-base font-medium text-zinc-900 dark:text-zinc-100">
+                  explore the full collection
+                </span>
+                <span className="text-sm text-zinc-500 transition-transform duration-200 group-hover:translate-x-1 dark:text-zinc-400">
+                  see every project <span aria-hidden="true">→</span>
+                </span>
+              </Link>
+            </section>
             <div className="mt-6">
               <ContributionGraph username="realhardik18" />
             </div>

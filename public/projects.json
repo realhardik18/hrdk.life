@@ -1,0 +1,847 @@
+[
+    {
+      "slug": "guru-sheet",
+      "title": "GuruSheet",
+      "description": "Turns any chapter into mind maps, practice sheets, and notes for rural teachers.",
+      "tags": [
+        "AI",
+        "EdTech",
+        "Web App",
+        "Next.js",
+        "Hackathon"
+      ],
+      "language": "TypeScript",
+      "date_created": "2026-07-30",
+      "date_updated": "2026-07-30",
+      "image": "https://raw.githubusercontent.com/realhardik18/guru-sheet/main/banner.png",
+      "links": {
+        "repo": "https://github.com/realhardik18/guru-sheet",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "reel-to-rasoi",
+      "title": "Reel to Rasoi",
+      "description": "Cook along to any YouTube Short, guided by voice in 23+ Indian languages.",
+      "tags": [
+        "AI",
+        "Voice",
+        "Web App",
+        "Next.js"
+      ],
+      "language": "TypeScript",
+      "date_created": "2026-07-26",
+      "date_updated": "2026-07-26",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/reel-to-rasoi",
+      "links": {
+        "repo": "https://github.com/realhardik18/reel-to-rasoi",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "reel-atlas",
+      "title": "ReelAtlas",
+      "description": "Reads your website and writes UGC scripts localized to each market's culture.",
+      "tags": [
+        "AI",
+        "Web App",
+        "Next.js",
+        "Supabase"
+      ],
+      "language": "TypeScript",
+      "date_created": "2026-03-12",
+      "date_updated": "2026-03-17",
+      "image": "https://github.com/user-attachments/assets/118a7dc6-e524-412a-a77a-81cb3f55ec9f",
+      "links": {
+        "repo": "https://github.com/realhardik18/reel-atlas",
+        "live": "https://reel-atlas-nine.vercel.app",
+        "demo": "https://docs.google.com/videos/d/1MOzc8UoGvpYF6uXPlHIOiObQvIrWZKeOuUnql3V2SN8/play"
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "code2docx",
+      "title": "Code2Docx",
+      "description": "Converts code and its output into a formatted DOCX for lab assignments.",
+      "tags": [
+        "Dev Tools",
+        "Web App",
+        "Next.js"
+      ],
+      "language": "JavaScript",
+      "date_created": "2026-03-06",
+      "date_updated": "2026-04-06",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/code2docx",
+      "links": {
+        "repo": "https://github.com/realhardik18/code2docx",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "menuchef",
+      "title": "MenuChef",
+      "description": "E-menu that reorders dishes based on the weather outside to lift sales.",
+      "tags": [
+        "Web App",
+        "Next.js"
+      ],
+      "language": "TypeScript",
+      "date_created": "2024-05-19",
+      "date_updated": "2026-06-05",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/MenuChef",
+      "links": {
+        "repo": "https://github.com/realhardik18/MenuChef",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "sih25",
+      "title": "AiTHLETIQ (SIH25)",
+      "description": "Rural athletes train and track progress; coaches scout talent. Top 50 of 800 at SIH.",
+      "tags": [
+        "AI",
+        "Sports",
+        "Mobile",
+        "Hackathon",
+        "Python"
+      ],
+      "language": "TypeScript",
+      "date_created": "2025-09-21",
+      "date_updated": "2025-09-26",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/SIH25",
+      "links": {
+        "repo": "https://github.com/realhardik18/SIH25",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "bear-care",
+      "title": "Bear Care",
+      "description": "AI care companion with a conversational interface.",
+      "tags": [
+        "AI",
+        "HealthTech",
+        "Web App",
+        "Next.js"
+      ],
+      "language": "JavaScript",
+      "date_created": "2025-09-18",
+      "date_updated": "2025-09-19",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/bear-care",
+      "links": {
+        "repo": "https://github.com/realhardik18/bear-care",
+        "live": "https://bear-care-three.vercel.app",
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "map-my-pain",
+      "title": "Map My Pain",
+      "description": "Patients pin pain on a 3D body model so doctors can track it between visits.",
+      "tags": [
+        "HealthTech",
+        "Web App",
+        "Next.js",
+        "3D"
+      ],
+      "language": "TypeScript",
+      "date_created": "2025-09-02",
+      "date_updated": "2025-09-03",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/map-my-pain",
+      "links": {
+        "repo": "https://github.com/realhardik18/map-my-pain",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "mykozu",
+      "title": "myKozu",
+      "description": "Turns scattered YouTube videos into a structured course you can actually finish.",
+      "tags": [
+        "EdTech",
+        "Web App",
+        "Next.js",
+        "Supabase"
+      ],
+      "language": "TypeScript",
+      "date_created": "2025-07-13",
+      "date_updated": "2025-07-13",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/mykozu",
+      "links": {
+        "repo": "https://github.com/realhardik18/mykozu",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "tinggg",
+      "title": "tinggg",
+      "description": "Voice agent that calls to check whether you finished your tasks.",
+      "tags": [
+        "AI",
+        "Voice",
+        "Productivity"
+      ],
+      "language": "JavaScript",
+      "date_created": "2025-06-21",
+      "date_updated": "2025-06-22",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/tinggg",
+      "links": {
+        "repo": "https://github.com/realhardik18/tinggg",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "clinical-threads",
+      "title": "Clinical Threads",
+      "description": "Curated feed of medicine-related threads from X.",
+      "tags": [
+        "HealthTech",
+        "Web App",
+        "Next.js"
+      ],
+      "language": "JavaScript",
+      "date_created": "2025-04-14",
+      "date_updated": "2025-05-24",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/clinical-threads",
+      "links": {
+        "repo": "https://github.com/realhardik18/clinical-threads",
+        "live": "https://clinical-threads.vercel.app",
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "steal-this-idea",
+      "title": "Steal This Idea",
+      "description": "135+ startup ideas from the brightest minds on Twitter.",
+      "tags": [
+        "Web App",
+        "Next.js"
+      ],
+      "language": "TypeScript",
+      "date_created": "2025-04-10",
+      "date_updated": "2026-02-25",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/steal-this-idea",
+      "links": {
+        "repo": "https://github.com/realhardik18/steal-this-idea",
+        "live": "https://steal-this-idea.vercel.app",
+        "demo": null
+      },
+      "stars": 16,
+      "needs_review": false
+    },
+    {
+      "slug": "moodnight",
+      "title": "MoodNight",
+      "description": "Reads the vibe of a Discord call and queues songs to match.",
+      "tags": [
+        "AI",
+        "Discord Bot",
+        "Music"
+      ],
+      "language": "JavaScript",
+      "date_created": "2024-12-19",
+      "date_updated": "2024-12-20",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/MoodNight",
+      "links": {
+        "repo": "https://github.com/realhardik18/MoodNight",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "cool-countdown-timer",
+      "title": "Cool Count Down Timer",
+      "description": "A countdown timer built for a hackathon.",
+      "tags": [
+        "Web App",
+        "React",
+        "Hackathon"
+      ],
+      "language": "TypeScript",
+      "date_created": "2024-12-18",
+      "date_updated": "2025-12-14",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/CoolCountDownTimer",
+      "links": {
+        "repo": "https://github.com/realhardik18/CoolCountDownTimer",
+        "live": "https://cool-count-down-timer.vercel.app",
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "quizme-mp3",
+      "title": "Quizme.mp3",
+      "description": "Upload an MP3, get an MCQ quiz generated from it and scored.",
+      "tags": [
+        "AI",
+        "EdTech",
+        "Web App",
+        "Flask",
+        "Hackathon"
+      ],
+      "language": "HTML",
+      "date_created": "2024-11-19",
+      "date_updated": "2024-11-25",
+      "image": "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tviu4cz02ywll4xzaste.png",
+      "links": {
+        "repo": "https://github.com/realhardik18/quizme.mp3",
+        "live": "https://quizme-mp3.onrender.com/",
+        "demo": "https://vimeo.com/1032980330"
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "curishot",
+      "title": "CuriShot",
+      "description": "Save lab-class screenshots to the cloud, download them later from home.",
+      "tags": [
+        "Web App",
+        "Flask",
+        "Hackathon"
+      ],
+      "language": "HTML",
+      "date_created": "2024-10-08",
+      "date_updated": "2024-10-13",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/CuriShot",
+      "links": {
+        "repo": "https://github.com/realhardik18/CuriShot",
+        "live": "https://curishot.onrender.com/",
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "medithon-syntax-error",
+      "title": "Medithon \u2014 Syntax Error",
+      "description": "Highlights medical policy text and explains it in plain language.",
+      "tags": [
+        "AI",
+        "HealthTech",
+        "Chrome Extension",
+        "Hackathon"
+      ],
+      "language": "HTML",
+      "date_created": "2024-09-29",
+      "date_updated": "2024-09-30",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/medithon_syntax-error",
+      "links": {
+        "repo": "https://github.com/realhardik18/medithon_syntax-error",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "jinsei",
+      "title": "Jinsei",
+      "description": "Finds the best plant to grow in Chennai.",
+      "tags": [
+        "Climate",
+        "Web App",
+        "Hackathon"
+      ],
+      "language": "HTML",
+      "date_created": "2024-09-09",
+      "date_updated": "2024-09-10",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/Jinsei",
+      "links": {
+        "repo": "https://github.com/realhardik18/Jinsei",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "lyricsboard",
+      "title": "LyricsBoard",
+      "description": "Word cloud built from the lyrics of your favourite artists' top songs.",
+      "tags": [
+        "Music",
+        "Web App",
+        "Data Viz"
+      ],
+      "language": "HTML",
+      "date_created": "2024-09-03",
+      "date_updated": "2024-09-07",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/LyricsBoard",
+      "links": {
+        "repo": "https://github.com/realhardik18/LyricsBoard",
+        "live": "https://lyrics-board.vercel.app/",
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "grillit",
+      "title": "GrillIt",
+      "description": "Roasts your Reddit profile in the form of a poem.",
+      "tags": [
+        "AI",
+        "Web App"
+      ],
+      "language": "HTML",
+      "date_created": "2024-07-08",
+      "date_updated": "2025-01-19",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/GrillIt",
+      "links": {
+        "repo": "https://github.com/realhardik18/GrillIt",
+        "live": "https://grill-it.vercel.app",
+        "demo": null
+      },
+      "stars": 2,
+      "needs_review": false
+    },
+    {
+      "slug": "pokemusic",
+      "title": "PokeMusic",
+      "description": "Builds a playlist for every Pok\u00e9mon from its stats. Made in 24 hours.",
+      "tags": [
+        "Music",
+        "Web App",
+        "Flask",
+        "Hackathon"
+      ],
+      "language": "HTML",
+      "date_created": "2022-09-02",
+      "date_updated": "2022-09-07",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/PokeMusic",
+      "links": {
+        "repo": "https://github.com/realhardik18/PokeMusic",
+        "live": "https://poke-music.herokuapp.com/",
+        "demo": null
+      },
+      "stars": 7,
+      "needs_review": false
+    },
+    {
+      "slug": "sport-lizar",
+      "title": "sport-lizar",
+      "description": "Pushes live cricket scores into a Discord channel.",
+      "tags": [
+        "Sports",
+        "Discord Bot",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2022-09-08",
+      "date_updated": "2022-09-09",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/sport-lizar",
+      "links": {
+        "repo": "https://github.com/realhardik18/sport-lizar",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "book-wheat",
+      "title": "Book-Wheat",
+      "description": "Twitter bot that files your tweets into categories and shows them on a site.",
+      "tags": [
+        "Automation",
+        "Web App",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2022-08-13",
+      "date_updated": "2022-09-25",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/Book-Wheat",
+      "links": {
+        "repo": "https://github.com/realhardik18/Book-Wheat",
+        "live": "https://bookwheat.herokuapp.com/home",
+        "demo": null
+      },
+      "stars": 2,
+      "needs_review": false
+    },
+    {
+      "slug": "discord-py-voice-recorder",
+      "title": "discord.py Voice Recorder",
+      "description": "Records a Discord voice channel and posts the MP3 back to chat.",
+      "tags": [
+        "Discord Bot",
+        "Open Source",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2022-07-13",
+      "date_updated": "2022-07-16",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/discord.py-voice-recorder",
+      "links": {
+        "repo": "https://github.com/realhardik18/discord.py-voice-recorder",
+        "live": null,
+        "demo": "https://www.youtube.com/watch?v=Bgy6gTPF4Gw"
+      },
+      "stars": 21,
+      "needs_review": false
+    },
+    {
+      "slug": "telecap",
+      "title": "Telecap",
+      "description": "IoT setup tracking who watches TV and for how long, with screen blockers.",
+      "tags": [
+        "IoT",
+        "Python"
+      ],
+      "language": "Jupyter Notebook",
+      "date_created": "2022-07-09",
+      "date_updated": "2022-07-09",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/Telecap",
+      "links": {
+        "repo": "https://github.com/realhardik18/Telecap",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "spotibuddy",
+      "title": "SpotiBuddy",
+      "description": "Your Spotify listening stats for the week, month, and year.",
+      "tags": [
+        "Music",
+        "Web App",
+        "Data Viz"
+      ],
+      "language": "HTML",
+      "date_created": "2022-06-11",
+      "date_updated": "2022-08-30",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/SpotiBuddy",
+      "links": {
+        "repo": "https://github.com/realhardik18/SpotiBuddy",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "topowars",
+      "title": "Topowars",
+      "description": "GeoGuessr, playable as a Discord bot game.",
+      "tags": [
+        "Game",
+        "Discord Bot",
+        "Hackathon"
+      ],
+      "language": "Python",
+      "date_created": "2022-05-12",
+      "date_updated": "2022-05-14",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/Topowars",
+      "links": {
+        "repo": "https://github.com/realhardik18/Topowars",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "thefamilyguybot",
+      "title": "TheFamilyGuyBot",
+      "description": "Archive of Family Guy clips, browsable through a Discord bot.",
+      "tags": [
+        "Discord Bot",
+        "Open Source",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2022-03-31",
+      "date_updated": "2022-03-31",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/TheFamilyGuyBot",
+      "links": {
+        "repo": "https://github.com/realhardik18/TheFamilyGuyBot",
+        "live": null,
+        "demo": null
+      },
+      "stars": 0,
+      "needs_review": false
+    },
+    {
+      "slug": "stalkify",
+      "title": "Stalkify",
+      "description": "Listen along with anyone on Discord by mirroring their Spotify playback.",
+      "tags": [
+        "Music",
+        "Discord Bot",
+        "Automation"
+      ],
+      "language": "Python",
+      "date_created": "2022-02-12",
+      "date_updated": "2026-08-01",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/Stalkify",
+      "links": {
+        "repo": "https://github.com/realhardik18/Stalkify",
+        "live": null,
+        "demo": null
+      },
+      "stars": 5,
+      "needs_review": false
+    },
+    {
+      "slug": "loadit",
+      "title": "LoadIt",
+      "description": "Downloads songs from Spotify and YouTube playlists.",
+      "tags": [
+        "Music",
+        "Web App",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2022-01-27",
+      "date_updated": "2022-02-03",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/LoadIt",
+      "links": {
+        "repo": "https://github.com/realhardik18/LoadIt",
+        "live": "https://LoadIt.realhardik18.repl.co",
+        "demo": null
+      },
+      "stars": 3,
+      "needs_review": false
+    },
+    {
+      "slug": "find-the-suii",
+      "title": "find-the-suii",
+      "description": "Find Ronaldo by sound alone \u2014 closer your cursor gets, louder it plays.",
+      "tags": [
+        "Game",
+        "Web App"
+      ],
+      "language": "HTML",
+      "date_created": "2022-01-22",
+      "date_updated": "2022-01-23",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/find-the-suii",
+      "links": {
+        "repo": "https://github.com/realhardik18/find-the-suii",
+        "live": "https://findthesuii.realhardik18.repl.co/",
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "charecter-generator",
+      "title": "Character Generator",
+      "description": "Generates every possible character from a set of art assets.",
+      "tags": [
+        "Automation",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2022-01-20",
+      "date_updated": "2022-01-21",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/Charecter-generator",
+      "links": {
+        "repo": "https://github.com/realhardik18/Charecter-generator",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "dislike-counter",
+      "title": "Dislike Counter",
+      "description": "Showed YouTube dislike counts after the UI hid them but the API hadn't.",
+      "tags": [
+        "Web App",
+        "Discord Bot",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2021-11-15",
+      "date_updated": "2021-11-25",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/Dislike-Counter",
+      "links": {
+        "repo": "https://github.com/realhardik18/Dislike-Counter",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "comparify",
+      "title": "Comparify",
+      "description": "Compares two Spotify playlists side by side.",
+      "tags": [
+        "Music",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2021-11-06",
+      "date_updated": "2021-12-18",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/comparify",
+      "links": {
+        "repo": "https://github.com/realhardik18/comparify",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "songs-downloader",
+      "title": "Songs Downloader",
+      "description": "Finds the YouTube equivalent of every Spotify track and zips them up.",
+      "tags": [
+        "Music",
+        "Automation",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2021-10-18",
+      "date_updated": "2021-10-18",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/songs-downloader",
+      "links": {
+        "repo": "https://github.com/realhardik18/songs-downloader",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "math-helper",
+      "title": "Maths Helper Bot",
+      "description": "Send a maths problem as an image, get the ten most useful links back.",
+      "tags": [
+        "Discord Bot",
+        "EdTech",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2021-09-02",
+      "date_updated": "2021-10-30",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/math-helper",
+      "links": {
+        "repo": "https://github.com/realhardik18/math-helper",
+        "live": null,
+        "demo": null
+      },
+      "stars": 3,
+      "needs_review": false
+    },
+    {
+      "slug": "time-controller",
+      "title": "Time Controller",
+      "description": "Reminds you when a running task has finished.",
+      "tags": [
+        "Productivity",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2021-07-13",
+      "date_updated": "2021-07-13",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/time-controller",
+      "links": {
+        "repo": "https://github.com/realhardik18/time-controller",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "todoer",
+      "title": "ToDoer",
+      "description": "Simple to-do list app built in Django.",
+      "tags": [
+        "Productivity",
+        "Web App",
+        "Django"
+      ],
+      "language": "HTML",
+      "date_created": "2021-05-10",
+      "date_updated": "2021-05-16",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/ToDoer",
+      "links": {
+        "repo": "https://github.com/realhardik18/ToDoer",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    },
+    {
+      "slug": "musician-bot",
+      "title": "Musician Bot",
+      "description": "Music playback for Discord voice channels. Ran in 30+ servers.",
+      "tags": [
+        "Music",
+        "Discord Bot",
+        "Python"
+      ],
+      "language": "Python",
+      "date_created": "2021-04-22",
+      "date_updated": "2021-04-23",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/musician-bot",
+      "links": {
+        "repo": "https://github.com/realhardik18/musician-bot",
+        "live": null,
+        "demo": null
+      },
+      "stars": 3,
+      "needs_review": false
+    },
+    {
+      "slug": "wyd-bot",
+      "title": "wyd-bot",
+      "description": "Live status site updated by a Discord bot that only listens to me.",
+      "tags": [
+        "Web App",
+        "Discord Bot",
+        "Flask"
+      ],
+      "language": "Python",
+      "date_created": "2021-04-13",
+      "date_updated": "2021-04-13",
+      "image": "https://opengraph.githubassets.com/1/realhardik18/wyd-bot",
+      "links": {
+        "repo": "https://github.com/realhardik18/wyd-bot",
+        "live": null,
+        "demo": null
+      },
+      "stars": 1,
+      "needs_review": false
+    }
+  ]
