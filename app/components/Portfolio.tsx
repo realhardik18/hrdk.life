@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { DitherGradient } from "@/components/dither-kit/gradient";
 import { ContributionGraph } from "./ContributionGraph";
 import { SocialLinks } from "./SocialLinks";
 // import { Keyboard } from "@/components/ui/keyboard";
@@ -211,14 +212,35 @@ export function Portfolio() {
               </h2>
               <Link
                 href="/projects"
-                className="group mt-4 flex min-h-32 flex-col justify-between rounded-lg border border-zinc-200 bg-zinc-50 p-5 text-left transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900"
+                className="group relative mt-4 flex min-h-32 items-center gap-5 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-5 text-left transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:bg-zinc-900"
               >
-                <span className="text-base font-medium text-zinc-900 dark:text-zinc-100">
-                  explore the full collection
-                </span>
-                <span className="text-sm text-zinc-500 transition-transform duration-200 group-hover:translate-x-1 dark:text-zinc-400">
-                  see every project <span aria-hidden="true">→</span>
-                </span>
+                <DitherGradient
+                  from="blue"
+                  direction="left"
+                  opacity={0.75}
+                  className="translate-x-10 opacity-0 mix-blend-screen transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 dark:mix-blend-normal [mask-image:linear-gradient(to_right,transparent_0%,transparent_28%,black_55%,black_100%)]"
+                />
+                <div
+                  className="relative z-10 size-24 shrink-0 overflow-hidden rounded-md bg-black"
+                  aria-hidden="true"
+                >
+                  <Image
+                    src="/projects.gif"
+                    alt=""
+                    fill
+                    sizes="96px"
+                    unoptimized
+                    className="object-contain"
+                  />
+                </div>
+                <div className="relative z-10 min-w-0 flex-1">
+                  <span className="block text-base font-medium text-zinc-900 dark:text-zinc-100">
+                    explore the full collection
+                  </span>
+                  <span className="mt-1 block text-sm text-zinc-500 transition-transform duration-200 group-hover:translate-x-1 dark:text-zinc-400">
+                    see every project <span aria-hidden="true">→</span>
+                  </span>
+                </div>
               </Link>
             </section>
             <div className="mt-6">
